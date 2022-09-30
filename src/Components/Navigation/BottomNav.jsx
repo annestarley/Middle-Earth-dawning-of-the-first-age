@@ -29,7 +29,7 @@ class BottomNav extends Component {
           </div>
           <div className='right-bottom-nav'>
             <div className='nav-bar-item turn stats'>
-              <div id='turn' className='single-line-item'>turn</div>
+              <div id='turn' className='turn-line'>turn</div>
             </div>
             <div className='nav-bar-item end button'>
               <div id='end'>End Turn</div>

@@ -50,6 +50,10 @@ h1, h3 {
   transform: translateY(50%);
 }
 
+.turn-line {
+  transform: translateY(31%);
+}
+
 .left-bottom-nav, .right-bottom-nav {
   display: flex;
   justify-content: space-between;
@@ -94,9 +98,9 @@ h1, h3 {
 
 .info-button {
   box-shadow: 3px 3px;
-  width: 48px;
+  width: 35px;
   height: 35px;
-  border-radius: 20px;
+  border-radius: 50%;
   border: solid 2px #000;
   font-weight: bold;
   font-size: 2rem;
@@ -288,6 +292,7 @@ h1, h3 {
 
 .build-button {
   margin: auto;
+  padding: 1.5%;
 }
 
 .build-button:hover {
