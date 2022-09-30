@@ -11,7 +11,7 @@ class BottomNav extends Component {
       <Fragment>
         <div className='nav-bar'>
           <div className='left-bottom-nav'>
-            <div className='nav-bar-item settlement button' id='settlement' onClick={(e) => this.props.setConsole(e)}>
+            <div className='nav-bar-item settlement button active' id='settlement' onClick={(e) => this.props.setConsole(e)}>
               Settlement
             </div>
             <div className='nav-bar-item tech button' id='tech' onClick={(e) => this.props.setConsole(e)}>

@@ -5,7 +5,10 @@ import Settlement from './GameConsole/Settlement/Settlement';
 import Info from './GameConsole/Info';
 import Tech from './GameConsole/Tech/Tech';
 import Buildings from './GameConsole/Buildings/Buildings';
-import Help from './GameConsole/Help'
+import Help from './GameConsole/Help';
+import LowFood from './Navigation/ToolTips/LowFood';
+import Starvation from './Navigation/ToolTips/Starvation';
+import HighRisk from './Navigation/ToolTips/HighRisk';
 
 class MainGame extends Component {
   constructor(props) {
@@ -76,7 +79,7 @@ class MainGame extends Component {
     for (let prop in navState) {
       prop == 'settlement' ? navState[prop] = true : navState[prop] = false;
       this.setState({nav: navState})
-      prop == 'settlement' ? document.getElementById(prop).classList.add('active') : document.getElementById(prop).classList.remove('active')
+      prop == 'settlement' ? (document.getElementById(prop).classList.contains('active') ? console.log('already active') : document.getElementById(prop).classList.add('active')) : (document.getElementById(prop).classList.contains('active') ? document.getElementById(prop).classList.remove('active') : console.log('not active'));
     }
   }
 
@@ -88,6 +91,9 @@ class MainGame extends Component {
           <h3>A precivilization game.</h3>
           <TopNav setConsole={(e) => this.setConsole(e)} />
           <div className='console'>
+            <LowFood />
+            <Starvation />
+            <HighRisk />
             {(this.state.nav.settlement) ? <Settlement /> : ''}
             {(this.state.nav.tech) ? <Tech exit={() => this.exit()} /> : ''}
             {(this.state.nav.buildings) ? <Buildings exit={() => this.exit()} /> : ''}

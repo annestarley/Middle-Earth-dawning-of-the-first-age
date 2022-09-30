@@ -9,7 +9,8 @@ class HighRisk extends Component {
   render() {
     return (
       <Fragment>
-        <div className='settlement-console'>
+        <div className='high-risk tip bounce'>
+          High risk
         </div>
       </Fragment>
     )

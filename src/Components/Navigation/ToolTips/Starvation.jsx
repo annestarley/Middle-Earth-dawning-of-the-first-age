@@ -1,6 +1,6 @@
 import React, {Component, Fragment } from 'react';
 
-class LowFood extends Component {
+class Starvation extends Component {
   constructor(props) {
     super(props);
     this.state = {}
@@ -9,12 +9,12 @@ class LowFood extends Component {
   render() {
     return (
       <Fragment>
-        <div className='low-food tip'>
-          Low food
+        <div className='starvation tip'>
+          Starvation
         </div>
       </Fragment>
     )
   }
 }
 
-export default LowFood;
+export default Starvation;
