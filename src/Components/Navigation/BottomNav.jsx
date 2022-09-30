@@ -14,26 +14,30 @@ class BottomNav extends Component {
     return (
       <Fragment>
         <div className='nav-bar'>
-          <div className='nav-bar-item settlement'>
-            <div id='settlement'>Settlement</div>
+          <div className='left-bottom-nav'>
+            <div className='nav-bar-item settlement'>
+              <div id='settlement' onClick={(e) => this.props.setConsole(e)}>Settlement</div>
+            </div>
+            <div className='nav-bar-item tech'>
+              <div id='tech' onClick={(e) => this.props.setConsole(e)}>Tech</div>
+            </div>
+            <div className='nav-bar-item buildings'>
+              <div id='buildings' onClick={(e) => this.props.setConsole(e)}>Buildings</div>
+            </div>
+            <div className='nav-bar-item help'>
+              <div id='help' onClick={(e) => this.props.setConsole(e)}>Help</div>
+            </div>
+            <div className='nav-bar-item menu'>
+              <div id='menu'>Menu</div>
+            </div>
           </div>
-          <div className='nav-bar-item tech'>
-            <div id='tech'>Tech</div>
-          </div>
-          <div className='nav-bar-item buildings'>
-            <div id='buildings'>Buildings</div>
-          </div>
-          <div className='nav-bar-item help'>
-            <div id='help'>Help</div>
-          </div>
-          <div className='nav-bar-item menu'>
-            <div id='menu'>Menu</div>
-          </div>
-          <div className='nav-bar-item turn'>
-            <div id='turn'>turn</div>
-          </div>
-          <div className='nav-bar-item end'>
-            <div id='end'>End Turn</div>
+          <div className='right-bottom-nav'>
+            <div className='nav-bar-item turn'>
+              <div id='turn'>turn</div>
+            </div>
+            <div className='nav-bar-item end'>
+              <div id='end'>End Turn</div>
+            </div>
           </div>
         </div>
       </Fragment>

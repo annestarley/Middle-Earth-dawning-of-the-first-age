@@ -40,7 +40,7 @@ class TopNav extends Component {
             <div id='threat'>threat %</div>
           </div>
           <div className='nav-bar-item info'>
-            <div id='info'>+</div>
+            <div id='info' onClick={(e) => this.props.setConsole(e)}>+</div>
           </div>
         </div>
       </Fragment>
