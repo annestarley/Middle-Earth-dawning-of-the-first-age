@@ -3,13 +3,9 @@ import ExitButton from '../ExitButton';
 
 class Techs extends Component {
   constructor(props) {
-        super(props);
-        this.state = {}
-
-        this.fetchState = this.fetchState.bind(this);
-    }
-
-    fetchState () {}
+    super(props);
+    this.state = {}
+  }
 
   render() {
     return (

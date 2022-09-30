@@ -9,68 +9,68 @@ import Help from './GameConsole/Help'
 
 class MainGame extends Component {
   constructor(props) {
-        super(props);
-        this.state = {
-          nav: {
-            settlement: true,
-            info: false,
-            tech: false,
-            buildings: false,
-            help: false,
-            menu: false
-          },
-          settlement: {
-            farming: {
-              num: 0,
-              limit: 15,
-              effect: 2
-            },
-            meadows: {
-              num: 0,
-              limit: 0,
-              effect: 3
-            },
-            fishing: {
-              num: 0,
-              limit: 0,
-              effect: 4
-            },
-            mining: {
-              num: 0,
-              limit: 0,
-              effect: 2
-            },
-            lore: {
-              num: 0,
-              limit: 0,
-              effect: 2
-            },
-            population: {
-              number: 12,
-              limit: 25
-            }
-          }
+    super(props);
+    this.state = {
+      nav: {
+        settlement: true,
+        info: false,
+        tech: false,
+        buildings: false,
+        help: false,
+        menu: false
+      },
+      settlement: {
+        farming: {
+          num: 0,
+          limit: 15,
+          effect: 2
+        },
+        meadows: {
+          num: 0,
+          limit: 0,
+          effect: 3
+        },
+        fishing: {
+          num: 0,
+          limit: 0,
+          effect: 4
+        },
+        mining: {
+          num: 0,
+          limit: 0,
+          effect: 2
+        },
+        lore: {
+          num: 0,
+          limit: 0,
+          effect: 2
+        },
+        population: {
+          number: 12,
+          limit: 25
         }
-
-        this.setConsole = this.setConsole.bind(this);
-        this.exit = this.exit.bind(this);
-    }
-
-    setConsole (e) {
-      let navState = this.state.nav;
-      for (let prop in navState) {
-        prop == e.target.id ? navState[prop] = true : navState[prop] = false;
       }
-      this.setState({nav: navState})
     }
 
-    exit () {
-      let navState = this.state.nav;
-      for (let prop in navState) {
-        prop == 'settlement' ? navState[prop] = true : navState[prop] = false;
-      }
-      this.setState({nav: navState})
+    this.setConsole = this.setConsole.bind(this);
+    this.exit = this.exit.bind(this);
+  }
+
+  setConsole (e) {
+    let navState = this.state.nav;
+    for (let prop in navState) {
+      prop == e.target.id ? navState[prop] = true : navState[prop] = false;
     }
+    this.setState({nav: navState})
+  }
+
+  exit () {
+    let navState = this.state.nav;
+    for (let prop in navState) {
+      prop == 'settlement' ? navState[prop] = true : navState[prop] = false;
+    }
+    this.setState({nav: navState})
+  }
 
   render() {
     return (
