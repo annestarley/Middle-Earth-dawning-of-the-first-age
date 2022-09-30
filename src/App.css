@@ -22,6 +22,124 @@ h1, h3 {
   padding: 0.5% 1% 0.5% 0.5%;
   right: 0;
   top: -2%;
+  border-radius: 50%;
+}
+
+/* NavBar css */
+.top-nav {
+  height: 55px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+.nav-bar-item {
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.single-line-item {
+  transform: translateY(50%);
+}
+
+.left-bottom-nav, .right-bottom-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-bottom-nav { width: 65%; }
+
+.right-bottom-nav { width: 18%; }
+
+.button {
+  box-shadow: 3px 3px;
+  width: 96px;
+  height: 23px;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: solid 2px #000;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.button:active {
+  box-shadow: 1px 1px;
+  margin-top: 7px;
+  height: 19px;
+  font-size: 0.8rem;
+}
+
+.button:hover {
+  box-shadow: 4px 4px;
+  font-size: 1rem;
+  margin-top: 1px;
+  height: 26px;
+}
+
+.stats {
+  margin-top: 5px;
+  padding: 9px;
+  background: #ccc;
+  border-radius: 80%;
+  font-size: 0.8rem;
+}
+
+.info-button {
+  box-shadow: 3px 3px;
+  width: 48px;
+  height: 35px;
+  border-radius: 20px;
+  border: solid 2px #000;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.info-button:hover {
+  box-shadow: 4px 4px;
+  font-size: 2.2rem;
+  height: 39px;
+}
+
+/* Info CSS */
+.info-console {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.info-div {
+  width: 30%;
+  border: solid 2px #000;
+  margin-top: 3%;
+  padding: 3% 1% 1% 1%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.info-div > h2 {
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: -7%;
+  transform: translate(-50%,-50%);
+  background: white;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 2% 3%;
+}
+
+.info-div > p, .info-div > ul {
+  font-size: 0.8rem;
 }
 
 /* Main Console CSS */
@@ -116,119 +234,62 @@ h1, h3 {
   transform: translateY(30%);
 }
 
-/* Info CSS */
-.info-console {
+/* Buildings CSS */
+.buildings-div, .buildings-info-div {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
 }
 
-.info-div {
-  width: 30%;
-  border: solid 2px #000;
-  margin-top: 3%;
-  padding: 3% 1% 1% 1%;
+.building {
+  width: 24%;
+  height: 100px;
+  border: solid 1px #666;
+  margin-top: 1%;
   border-radius: 5px;
-  position: relative;
 }
 
-.info-div > h2 {
-  font-weight: bold;
-  position: absolute;
-  text-align: center;
-  left: 50%;
-  top: -7%;
-  transform: translate(-50%,-50%);
-  background: white;
-  border: 2px solid #000;
+.buildings-info-div {
+  padding-top: 2%;
+}
+
+.building-description {
+  border: solid 1px #666;
   border-radius: 5px;
-  padding: 2% 3%;
-}
-
-.info-div > p, .info-div > ul {
-  font-size: 0.8rem;
-}
-
-/* NavBar css */
-.top-nav {
-  height: 55px;
-}
-
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  border: 2px solid black;
-  padding: 10px;
-  margin: 2px;
-  border-radius: 10px;
-}
-
-.nav-bar-item {
-  display: inline-block;
-  padding: 5px;
-  text-align: center;
-  margin-top: 3px;
-}
-
-.single-line-item {
-  transform: translateY(50%);
-}
-
-.left-bottom-nav, .right-bottom-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.left-bottom-nav { width: 65%; }
-
-.right-bottom-nav { width: 18%; }
-
-.button {
-  box-shadow: 3px 3px;
-  width: 96px;
-  height: 23px;
-  margin-top: 5px;
-  border-radius: 20px;
-  border: solid 2px #000;
-  font-weight: bold;
+  padding: 1%;
+  width: 50%;
   font-size: 0.9rem;
+  height: 80px;
 }
 
-.button:active {
-  box-shadow: 1px 1px;
-  margin-top: 7px;
-  height: 19px;
-  font-size: 0.8rem;
+.building-production {
+  text-align: center;
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
 }
 
-.button:hover {
-  box-shadow: 4px 4px;
-  font-size: 1rem;
-  margin-top: 1px;
-  height: 26px;
+.building-production > h4 {
+  margin-top: 1% 0;
 }
 
-.stats {
-  margin-top: 5px;
-  padding: 9px;
+.production-points {
+  width: 55%;
+}
+
+.production-pts {
   background: #ccc;
-  border-radius: 80%;
-  font-size: 0.8rem;
+  border-radius: 50%;
+  width: 50px;
+  margin: 5px auto;
+  padding: 5;
 }
 
-.info-button {
-  box-shadow: 3px 3px;
-  width: 48px;
-  height: 35px;
-  border-radius: 20px;
-  border: solid 2px #000;
-  font-weight: bold;
-  font-size: 2rem;
+.build-button {
+  margin: auto;
 }
 
-.info-button:hover {
-  box-shadow: 4px 4px;
-  font-size: 2.2rem;
-  height: 39px;
+.build-button:hover {
+  margin: auto;
 }
