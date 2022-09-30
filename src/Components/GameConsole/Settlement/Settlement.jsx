@@ -1,4 +1,10 @@
 import React, {Component, Fragment } from 'react';
+import Farming from './Farming';
+import Meadows from './Meadows';
+import Fishing from './Fishing';
+import Lore from './Lore';
+import Mining from './Mining';
+import Strength from './Strength';
 
 class Settlement extends Component {
   constructor(props) {
@@ -13,7 +19,13 @@ class Settlement extends Component {
   render() {
     return (
       <Fragment>
-        <h1>Settlement to come</h1>
+        <div className='settlement-console'>
+          <Strength />
+          <Farming />
+          <Meadows />
+          <Mining />
+          <Fishing />
+        </div>
       </Fragment>
     )
   }

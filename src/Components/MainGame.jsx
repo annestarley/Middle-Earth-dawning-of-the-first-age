@@ -18,6 +18,37 @@ class MainGame extends Component {
             buildings: false,
             help: false,
             menu: false
+          },
+          settlement: {
+            farming: {
+              num: 0,
+              limit: 15,
+              effect: 2
+            },
+            meadows: {
+              num: 0,
+              limit: 0,
+              effect: 3
+            },
+            fishing: {
+              num: 0,
+              limit: 0,
+              effect: 4
+            },
+            mining: {
+              num: 0,
+              limit: 0,
+              effect: 2
+            },
+            lore: {
+              num: 0,
+              limit: 0,
+              effect: 2
+            },
+            population: {
+              number: 12,
+              limit: 25
+            }
           }
         }
 

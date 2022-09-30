@@ -4,17 +4,97 @@ h1, h3 {
 }
 
 .main-game {
-  width: 70%;
+  width: 1000px;
   margin: 0 auto;
 }
 
-/* Main Console */
+/* Main Console CSS */
 .console {
-  width: 90%;
+  width: 910px;
   border-left: solid 2px black;
   border-right: solid 2px black;
   margin: 0 auto;
-  height: 100px;
+  height: 400px;
+}
+
+/* Settlement CSS */
+.settlement-console {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.settlement-console > div {
+  position: absolute;
+  width: 25%;
+}
+
+.settlement-console > div > div {
+  display: inline-block;
+}
+
+.mining-div {
+  top: 30%;
+  left: 5%;
+}
+
+.strength-div {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.meadows-div {
+  top: 23%;
+  right: 5%;
+}
+
+.fishing-div {
+  bottom: 10%;
+  left: 5%;
+}
+
+.lore-div {
+  bottom: 20%;
+  left: 45%;
+}
+
+.farming-div {
+  bottom: 5%;
+  right: 5%;
+}
+
+.round-button-container {
+  height: 35px;
+  width: 35px;
+  margin: 10px 5%;
+}
+
+.round-button-container:hover {
+  margin: 0px 5%;
+}
+
+.button-round {
+  box-shadow: 3px 3px;
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: solid 2px #000;
+  text-align: center;
+  padding: 5px 2px 0 0px;
+}
+
+.button-round:hover {
+  box-shadow: 4px 4px;
+  width: 32px;
+  height: 32px;
+  margin-top: 2px;
+}
+
+.settlement-stats {
+  transform: translateY(30%);
 }
 
 /* NavBar css */
@@ -30,9 +110,12 @@ h1, h3 {
 .nav-bar-item {
   display: inline-block;
   padding: 5px;
-  border: solid 2px #000;
   text-align: center;
-  border-radius: 20px;
+  margin-top: 3px;
+}
+
+.single-line-item {
+  transform: translateY(50%);
 }
 
 .left-bottom-nav, .right-bottom-nav {
@@ -43,3 +126,34 @@ h1, h3 {
 .left-bottom-nav { width: 60%; }
 
 .right-bottom-nav { width: 15%; }
+
+.button {
+  box-shadow: 3px 3px;
+  width: 85px;
+  height: 23px;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: solid 2px #000;
+}
+
+.button:active {
+  box-shadow: 1px 1px;
+  margin-top: 7px;
+  height: 19px;
+  font-size: 0.8rem;
+}
+
+.button:hover {
+  box-shadow: 4px 4px;
+  font-size: 1.1rem;
+  margin-top: 1px;
+  height: 26px;
+}
+
+.stats {
+  margin-top: 5px;
+  padding: 9px;
+  background: #ccc;
+  border-radius: 80%;
+  font-size: 0.8rem;
+}

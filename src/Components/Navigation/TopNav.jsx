@@ -14,10 +14,10 @@ class TopNav extends Component {
     return (
       <Fragment>
         <div className='nav-bar'>
-          <div className='nav-bar-item year'>
-            <div id='year'>year</div>
+          <div className='nav-bar-item year stats'>
+            <div id='year' className='single-line-item'>year</div>
           </div>
-          <div className='nav-bar-item population'>
+          <div className='nav-bar-item population stats'>
             <div id='pop-limit'>
               <span id='pop'>pop</span>
               <span>/</span>
@@ -25,21 +25,21 @@ class TopNav extends Component {
             </div>
             <div id='pop-growth'>+pop</div>
           </div>
-          <div className='nav-bar-item food'>
-            <div className='food-growth'>+food</div>
+          <div className='nav-bar-item food stats'>
+            <div className='food-growth' className='single-line-item'>+food</div>
           </div>
-          <div className='nav-bar-item production'>
+          <div className='nav-bar-item production stats'>
             <div id='total-prod'>total prod</div>
             <div id='prod-growth'>+prod</div>
           </div>
-          <div className='nav-bar-item lore'>
+          <div className='nav-bar-item lore stats'>
             <div id='total-lore'>total lore</div>
             <div id='lore-growth'>+lore</div>
           </div>
-          <div className='nav-bar-item threat'>
-            <div id='threat'>threat %</div>
+          <div className='nav-bar-item threat stats'>
+            <div id='threat' className='single-line-item'>threat %</div>
           </div>
-          <div className='nav-bar-item info'>
+          <div className='nav-bar-item info button'>
             <div id='info' onClick={(e) => this.props.setConsole(e)}>+</div>
           </div>
         </div>
