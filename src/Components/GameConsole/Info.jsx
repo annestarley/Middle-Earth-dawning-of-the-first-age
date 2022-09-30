@@ -1,4 +1,5 @@
 import React, {Component, Fragment } from 'react';
+import ExitButton from './ExitButton';
 
 class Info extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Info extends Component {
   render() {
     return (
       <Fragment>
+        <ExitButton exit={() => this.props.exit()} />
         <div className='info-console'>
           <div className='info-div info-pop'>
             <h2>Population</h2>

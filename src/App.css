@@ -12,7 +12,16 @@ h1, h3 {
 
 .main-game {
   width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 10%;
+}
+
+.exit-button-container {
+  position: absolute;
+  background: white;
+  z-index: 12;
+  padding: 0.5% 1% 0.5% 0.5%;
+  right: 0;
+  top: -2%;
 }
 
 /* Main Console CSS */
@@ -20,8 +29,9 @@ h1, h3 {
   width: 910px;
   border-left: solid 2px black;
   border-right: solid 2px black;
-  margin: 0 auto;
-  height: 400px;
+  margin: 1% auto;
+  height: 480px;
+  position: relative;
 }
 
 /* Settlement CSS */
@@ -118,7 +128,7 @@ h1, h3 {
   width: 30%;
   border: solid 2px #000;
   margin-top: 3%;
-  padding: 2% 1% 1% 1%;
+  padding: 3% 1% 1% 1%;
   border-radius: 5px;
   position: relative;
 }
@@ -134,14 +144,17 @@ h1, h3 {
   border: 2px solid #000;
   border-radius: 5px;
   padding: 2% 3%;
-  font-size: 0.9rem;
 }
 
 .info-div > p, .info-div > ul {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 /* NavBar css */
+.top-nav {
+  height: 55px;
+}
+
 .nav-bar {
   display: flex;
   justify-content: space-between;

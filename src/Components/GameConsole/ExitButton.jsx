@@ -1,7 +1,6 @@
 import React, {Component, Fragment } from 'react';
-import ExitButton from '../ExitButton';
 
-class Techs extends Component {
+class ExitButton extends Component {
   constructor(props) {
         super(props);
         this.state = {}
@@ -14,10 +13,12 @@ class Techs extends Component {
   render() {
     return (
       <Fragment>
-        <ExitButton exit={() => this.props.exit()} />
+        <div className='exit-button-container' onClick={() => this.props.exit()}>
+          <div className='exit button-round'>x</div>
+        </div>
       </Fragment>
     )
   }
 }
 
-export default Techs;
+export default ExitButton;

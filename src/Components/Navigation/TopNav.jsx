@@ -13,7 +13,7 @@ class TopNav extends Component {
   render() {
     return (
       <Fragment>
-        <div className='nav-bar'>
+        <div className='nav-bar top-nav'>
           <div className='nav-bar-item year stats'>
             <div id='year' className='single-line-item'>year</div>
           </div>
