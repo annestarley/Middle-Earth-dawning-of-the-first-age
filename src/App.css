@@ -298,3 +298,36 @@ h1, h3 {
 .build-button:hover {
   margin: auto;
 }
+
+/* Help CSS */
+.help-console {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 80%;
+  margin: 5% auto;
+}
+
+.help-div {
+  width: 32%;
+  border: solid 1px #666;
+  margin-top: 1%;
+  border-radius: 5px;
+  position: relative;
+  height: 48%;
+}
+
+.help-div > div {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  width: 90%;
+  border-radius: 5px;
+  border: solid black 2px;
+  font-size: 0.8rem;
+  height: 60px;
+  padding: 0 3%;
+}

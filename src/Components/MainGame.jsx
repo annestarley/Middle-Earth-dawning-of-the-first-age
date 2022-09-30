@@ -23,31 +23,37 @@ class MainGame extends Component {
         farming: {
           num: 0,
           limit: 15,
-          effect: 2
+          effect: 2,
+          multiplier: 1
         },
         meadows: {
           num: 0,
           limit: 0,
-          effect: 3
+          effect: 3,
+          multiplier: 1
         },
         fishing: {
           num: 0,
           limit: 0,
-          effect: 4
+          effect: 4,
+          multiplier: 1
         },
         mining: {
           num: 0,
           limit: 0,
-          effect: 2
+          effect: 2,
+          multiplier: 1
         },
         lore: {
           num: 0,
           limit: 0,
-          effect: 2
+          effect: 2,
+          multiplier: 1
         },
         population: {
           number: 12,
-          limit: 25
+          limit: 25,
+          multiplier: 1
         }
       }
     }
