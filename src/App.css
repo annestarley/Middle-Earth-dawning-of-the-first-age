@@ -74,7 +74,7 @@ h1, h3 {
   font-size: 0.9rem;
 }
 
-.button:active {
+.button:focus {
   box-shadow: 1px 1px;
   margin-top: 7px;
   height: 19px;
@@ -112,6 +112,10 @@ h1, h3 {
   height: 39px;
 }
 
+.active {
+  background: #d3d3d3;
+}
+
 /* Info CSS */
 .info-console {
   display: inline-flex;
@@ -144,6 +148,7 @@ h1, h3 {
 
 .info-div > p, .info-div > ul {
   font-size: 0.8rem;
+  font-weight: bold;
 }
 
 /* Main Console CSS */
@@ -327,7 +332,8 @@ h1, h3 {
   width: 90%;
   border-radius: 5px;
   border: solid black 2px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   height: 60px;
   padding: 0 3%;
+  font-weight: 900;
 }

@@ -12,27 +12,27 @@ class BottomNav extends Component {
         <div className='nav-bar'>
           <div className='left-bottom-nav'>
             <div className='nav-bar-item settlement button' id='settlement' onClick={(e) => this.props.setConsole(e)}>
-              <div id='settlement'>Settlement</div>
+              Settlement
             </div>
             <div className='nav-bar-item tech button' id='tech' onClick={(e) => this.props.setConsole(e)}>
-              <div id='tech'>Tech</div>
+              Tech
             </div>
             <div className='nav-bar-item buildings button' id='buildings' onClick={(e) => this.props.setConsole(e)}>
-              <div id='buildings'>Buildings</div>
+              Buildings
             </div>
             <div className='nav-bar-item help button' id='help' onClick={(e) => this.props.setConsole(e)}>
-              <div id='help'>Help</div>
+              Help
             </div>
             <div className='nav-bar-item menu button'>
-              <div id='menu'>Menu</div>
+              Menu
             </div>
           </div>
           <div className='right-bottom-nav'>
             <div className='nav-bar-item turn stats'>
-              <div id='turn' className='turn-line'>turn</div>
+              <div id='turn-text' className='turn-line'>turn</div>
             </div>
             <div className='nav-bar-item end button'>
-              <div id='end'>End Turn</div>
+              End Turn
             </div>
           </div>
         </div>

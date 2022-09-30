@@ -66,16 +66,18 @@ class MainGame extends Component {
     let navState = this.state.nav;
     for (let prop in navState) {
       prop == e.target.id ? navState[prop] = true : navState[prop] = false;
+      this.setState({nav: navState})
+      prop == e.target.id ? e.target.classList.add('active') : document.getElementById(prop).classList.remove('active')
     }
-    this.setState({nav: navState})
   }
 
   exit () {
     let navState = this.state.nav;
     for (let prop in navState) {
       prop == 'settlement' ? navState[prop] = true : navState[prop] = false;
+      this.setState({nav: navState})
+      prop == 'settlement' ? document.getElementById(prop).classList.add('active') : document.getElementById(prop).classList.remove('active')
     }
-    this.setState({nav: navState})
   }
 
   render() {
@@ -89,7 +91,7 @@ class MainGame extends Component {
             {(this.state.nav.settlement) ? <Settlement /> : ''}
             {(this.state.nav.tech) ? <Tech exit={() => this.exit()} /> : ''}
             {(this.state.nav.buildings) ? <Buildings exit={() => this.exit()} /> : ''}
-            {(this.state.nav.help) ? <Help /> : ''}
+            {(this.state.nav.help) ? <Help exit={() => this.exit()} /> : ''}
             {(this.state.nav.info) ? <Info exit={() => this.exit()} /> : ''}
           </div>
           <BottomNav setConsole={(e) => this.setConsole(e)} />
