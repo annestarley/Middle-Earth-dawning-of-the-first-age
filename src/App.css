@@ -364,6 +364,11 @@ h1, h3 {
   height: 30px;
 }
 
+#megastructure-div {
+  width: 40px;
+  height: 40px;
+}
+
 .fishing-techs > div, .hunting-techs > div, .population-techs > div, .lore-techs > div {
   left: 50%;
   transform: translateX(-50%);
@@ -399,7 +404,7 @@ h1, h3 {
 
 .bread { top: 12%; right: 40%; }
 
-.trade { top: 60%; right: 20%}
+.trade { top: 60%; right: 10%}
 
 .stone-brick-construction { top: 15%; }
 
@@ -410,6 +415,31 @@ h1, h3 {
 .metallurgy { top: 50%; right: 30%; }
 
 .lore { top: 13%; }
+
+/* Third Era Positions */
+.sail { top: 40%; }
+
+.animal-breeding { top: 10%; }
+
+.plow { top: 10%; left: 15%; }
+
+.currency { top: 8%; right: 40%; }
+
+.writing { top: 1%; right: 10%; }
+
+.code-of-law { top: 50%; right: 10%;}
+
+.city-planning { top: 55%; left: 10%; }
+
+.megastructure { top: 54%; }
+
+.bronze-working { top: 15%; left: 20%; }
+
+.riding { top: 15%; right: 10%; }
+
+.bronze-weapons { top: 45%; right: 35%; }
+
+.valar { top: 15%; }
 
 .tech-info-div {
   display: inline-flex;
