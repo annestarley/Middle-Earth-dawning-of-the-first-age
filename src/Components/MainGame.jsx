@@ -9,6 +9,7 @@ import Help from './GameConsole/Help';
 import LowFood from './Navigation/ToolTips/LowFood';
 import Starvation from './Navigation/ToolTips/Starvation';
 import HighRisk from './Navigation/ToolTips/HighRisk';
+import PopulationLimit from './Navigation/ToolTips/PopulationLimit'
 
 class MainGame extends Component {
   constructor(props) {
@@ -94,6 +95,7 @@ class MainGame extends Component {
             <LowFood />
             <Starvation />
             <HighRisk />
+            <PopulationLimit />
             {(this.state.nav.settlement) ? <Settlement /> : ''}
             {(this.state.nav.tech) ? <Tech exit={() => this.exit()} /> : ''}
             {(this.state.nav.buildings) ? <Buildings exit={() => this.exit()} /> : ''}

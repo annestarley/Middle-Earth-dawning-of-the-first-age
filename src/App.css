@@ -157,12 +157,17 @@ h1, h3 {
 
 .low-food, .starvation {
   top: -3%;
-  left: 11%;
+  left: 27.5%;
 }
 
 .high-risk {
   top: -3%;
   right: 10.5%;
+}
+
+.population-limit {
+  top: -3%;
+  left: 8.5%;
 }
 
 /* Info CSS */
@@ -364,6 +369,7 @@ h1, h3 {
   transform: translateX(-50%);
 }
 
+/* FIRST ERA POSITIONS */
 .primitive-hunting { top: 19%; }
 
 .spear-hunting { top: 60%; }
@@ -381,6 +387,29 @@ h1, h3 {
 .mining { top: 40%; right: 20%; }
 
 .meeting-of-tulkas { top: 13%; }
+
+/* SECOND ERA POSITIONS */
+.boat { top: 5%; }
+
+.oar { top: 50%; }
+
+.animal-medicine { top: 15%; }
+
+.irrigation { top: 12%; left: 15%; }
+
+.bread { top: 12%; right: 40%; }
+
+.trade { top: 60%; right: 20%}
+
+.stone-brick-construction { top: 15%; }
+
+.copper-working { top: 10%; left: 20%; }
+
+.copper-weapons { top: 60%; left: 20%;}
+
+.metallurgy { top: 50%; right: 30%; }
+
+.lore { top: 13%; }
 
 .tech-info-div {
   display: inline-flex;
