@@ -127,6 +127,7 @@ h1, h3 {
   font-size: 0.7rem;
   box-shadow: 2px 2px #ccc;
   text-shadow: 1px 1px #ccc;
+  z-index: 20;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -289,6 +290,134 @@ h1, h3 {
 
 .settlement-stats {
   transform: translateY(30%);
+}
+
+/* Tech CSS */
+.techs-div {
+  padding: 1%;
+}
+
+.techs-div > div {
+  width: 98%;
+  height: 103px;
+  margin: 0 auto;
+  border: solid 1px #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  width: 15%;
+  padding: 0 1%;
+  text-align: center;
+  position: relative;
+}
+
+.date > h4 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -11%;
+  background: white;
+  padding: 1%;
+  border: solid 2px #000;
+  border-radius: 5px;
+}
+
+.roman-date {
+  font-size: 3.5rem;
+  border: solid 2px #000;
+  font-weight: 900;
+  border-radius: 50%;
+  margin-top: 22%;
+}
+
+.era-techs {
+  width: 81%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.era-techs > div {
+  border: solid 1px orange;
+  position: relative;
+}
+
+.fishing-techs, .hunting-techs, .population-techs, .lore-techs {
+  width: 12%;
+}
+
+.farming-techs, .mining-techs {
+  width: 26%;
+}
+
+.era-techs > div > div {
+  position: absolute;
+  border: solid 2px #000;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.fishing-techs > div, .hunting-techs > div, .population-techs > div, .lore-techs > div {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.primitive-hunting { top: 19%; }
+
+.spear-hunting { top: 60%; }
+
+.primitive-farming { top: 5%; left: 20%; }
+
+.cultivation { top: 55%; left: 20%; }
+
+.mudbrick-construction { top: 15%; }
+
+.advanced-stone-tools { top: 10%; left: 30%; }
+
+.advanced-stone-weapons { top: 60%; left: 20%; }
+
+.mining { top: 40%; right: 20%; }
+
+.meeting-of-tulkas { top: 13%; }
+
+.tech-info-div {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tech-description {
+  border: solid 1px #666;
+  border-radius: 5px;
+  padding: 1%;
+  height: 80px;
+  margin: 2% 0.5%;
+  width: 50%;
+  font-weight: 900;
+}
+
+.tech-pts-headers {
+  width: 35%;
+}
+
+.tech-pts-headers > h4 {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+.tech-description .title {
+  font-size: 0.9rem;
+}
+
+.tech-description .requirements {
+  color: red;
+}
+
+.tech-description .requirements, .tech-description .description {
+  font-size: 0.8rem;
 }
 
 /* Buildings CSS */
