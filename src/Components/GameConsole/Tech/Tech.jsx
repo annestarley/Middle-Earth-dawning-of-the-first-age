@@ -27,6 +27,11 @@ class Techs extends Component {
     document.querySelector('.tech-description .description').innerText = newDescription;
     document.querySelector('.tech-description .title').innerText = newTitle;
     document.querySelector('.tech-description .requirements').innerText = newRequirements;
+
+    let divs = document.querySelectorAll('.era-techs > div > div');
+    divs.forEach(div => {
+      e.target.id == div.childNodes[0].id ? (div.classList.contains('selected') ? console.log('selected') : div.classList.add('selected')) : (div.classList.contains('selected') ? div.classList.remove('selected') : console.log('unselected'));
+    })
   }
 
   render() {

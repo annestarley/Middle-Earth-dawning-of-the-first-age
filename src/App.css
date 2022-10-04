@@ -170,6 +170,14 @@ h1, h3 {
   left: 8.5%;
 }
 
+.high-risk, .starvation {
+  box-shadow: 0.5px 0.5px 2px 2px #871229;
+}
+
+.low-food, .population-limit {
+  box-shadow: 0.5px 0.5px 2px 2px #edc472;
+}
+
 /* Info CSS */
 .info-console {
   display: inline-flex;
@@ -344,7 +352,6 @@ h1, h3 {
 }
 
 .era-techs > div {
-  border: solid 1px orange;
   position: relative;
 }
 
@@ -362,6 +369,7 @@ h1, h3 {
   border-radius: 5px;
   width: 30px;
   height: 30px;
+  box-shadow: 2px 2px #ccc;
 }
 
 #megastructure-div {
@@ -457,26 +465,52 @@ h1, h3 {
   font-weight: 900;
 }
 
-.tech-pts-headers {
-  width: 35%;
-}
-
-.tech-pts-headers > h4 {
-  display: inline-block;
-  width: 50%;
-  text-align: center;
-}
-
-.tech-description .title {
+.tech-pts-headers, .tech-pts {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
   font-size: 0.9rem;
 }
 
-.tech-description .requirements {
-  color: red;
+.tech-pts-headers > h4, .tech-pts > div {
+  display: inline-block;
+  width: 47%;
+  text-align: center;
+  padding: 1% 0;
 }
 
-.tech-description .requirements, .tech-description .description {
+.tech-pts-headers > h4 {
+  border: solid 2px black;
+  border-radius: 5px;
+}
+
+.tech-description .title {
+  font-weight: 900;
+}
+
+.tech-description .requirements {
+  color: #871229;
+  font-weight: 600;
+}
+
+.tech-description .description {
+  font-weight: 500;
+}
+
+.tech-description .requirements, .tech-description .description, .tech-description .title {
   font-size: 0.8rem;
+}
+
+.tech-description p {
+  margin: 5px;
+}
+
+.built {
+  box-shadow: 0.5px 0.5px 2px 2px #edc472!important;
+}
+
+.selected {
+  box-shadow: 0.5px 0.5px 2px 2px #BDF77C!important;
 }
 
 /* Buildings CSS */
@@ -534,6 +568,8 @@ h1, h3 {
 .build-button {
   margin: auto;
   padding: 1.5%;
+  text-align: center;
+  width: 7%;
 }
 
 .build-button:hover {

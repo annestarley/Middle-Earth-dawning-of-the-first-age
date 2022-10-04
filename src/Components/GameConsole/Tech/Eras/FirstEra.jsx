@@ -25,7 +25,7 @@ class FirstEra extends Component {
               </div>
             </div>
             <div className='farming-techs'>
-              <div className='primitive-farming'>
+              <div className='primitive-farming built'>
                 <img id='primitive-farming' src='https://via.placeholder.com/300.png/ccc/fff' alt='Primitive farming description. Requirements: primitive farming requirements' width='29px' height='29px' onClick={(e) => this.props.setDescription(e)}/>
               </div>
               <div className='cultivation'>
