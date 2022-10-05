@@ -567,13 +567,18 @@ h1, h3 {
 
 .build-button {
   margin: auto;
-  padding: 1.5%;
+  padding: 13.6px;
   text-align: center;
-  width: 7%;
+  width: 64.3px;
 }
 
 .build-button:hover {
   margin: auto;
+}
+
+.production-points h4 {
+  border: solid 2px black;
+  border-radius: 5px;
 }
 
 /* Help CSS */

@@ -6,6 +6,7 @@ import Info from './GameConsole/Info';
 import Tech from './GameConsole/Tech/Tech';
 import Buildings from './GameConsole/Buildings/Buildings';
 import Help from './GameConsole/Help';
+import Menu from './GameConsole/Menu';
 import LowFood from './Navigation/ToolTips/LowFood';
 import Starvation from './Navigation/ToolTips/Starvation';
 import HighRisk from './Navigation/ToolTips/HighRisk';
@@ -101,6 +102,7 @@ class MainGame extends Component {
             {(this.state.nav.buildings) ? <Buildings exit={() => this.exit()} /> : ''}
             {(this.state.nav.help) ? <Help exit={() => this.exit()} /> : ''}
             {(this.state.nav.info) ? <Info exit={() => this.exit()} /> : ''}
+            {(this.state.nav.menu) ? <Menu exit={() => this.exit()} /> : ''}
           </div>
           <BottomNav setConsole={(e) => this.setConsole(e)} />
         </div>
