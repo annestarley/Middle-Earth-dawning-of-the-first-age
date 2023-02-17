@@ -15,9 +15,9 @@ class TopNav extends Component {
           </div>
           <div className='nav-bar-item population stats'>
             <div id='pop-limit'>
-              <span id='pop'>pop</span>
+              <span id='pop'>{this.props.settlement.population.number}</span>
               <span>/</span>
-              <span id='limit'>limit</span>
+              <span id='limit'>{this.props.settlement.population.limit}</span>
             </div>
             <div id='pop-growth'>+pop</div>
           </div>

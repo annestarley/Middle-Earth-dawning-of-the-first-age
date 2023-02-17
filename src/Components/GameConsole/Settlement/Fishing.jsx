@@ -11,11 +11,11 @@ class Fishing extends Component {
       <Fragment>
         <div className='fishing-div'>
           <div className='round-button-container'>
-            <div className='plus button-round'>+</div>
+            <div className='plus button-round' onClick={(e) => this.props.editWorkers(e)}>+</div>
           </div>
           <div className='settlement-stats'><span>{this.props.fishing.num}</span> / <span>{this.props.fishing.limit}</span></div>
           <div className='round-button-container'>
-            <div className='minus button-round'>-</div>
+            <div className='minus button-round' onClick={(e) => this.props.editWorkers(e)}>-</div>
           </div>
         </div>
       </Fragment>

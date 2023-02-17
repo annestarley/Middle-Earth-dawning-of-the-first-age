@@ -65,6 +65,7 @@ class MainGame extends Component {
 
     this.setConsole = this.setConsole.bind(this);
     this.exit = this.exit.bind(this);
+    this.editWorkers = this.editWorkers.bind(this);
   }
 
   setConsole (e) {
@@ -85,6 +86,26 @@ class MainGame extends Component {
     }
   }
 
+  editWorkers (e) {
+    let div = e.target.parentNode.parentNode.classList.value;
+    let category = div.slice(0, div.length-4)
+    if (e.target.classList.contains('plus')) {
+      if (this.state.settlement[category].num < this.state.settlement[category].limit && this.state.settlement.population.number > 0) {
+        let newState = this.state.settlement;
+        newState[category].num += 1;
+        newState.population.number -= 1;
+        this.setState({settlement: newState});
+      }
+    } else if (e.target.classList.contains('minus')) {
+      if (this.state.settlement[category].num > 0) {
+        let newState = this.state.settlement;
+        newState[category].num -= 1;
+        newState.population.number += 1;
+        this.setState({settlement: newState});
+      }
+    }
+  }
+
   render() {
     return (
       <Fragment>
@@ -97,7 +118,7 @@ class MainGame extends Component {
             <Starvation />
             <HighRisk />
             <PopulationLimit />
-            {(this.state.nav.settlement) ? <Settlement settlement={this.state.settlement} /> : ''}
+            {(this.state.nav.settlement) ? <Settlement settlement={this.state.settlement} editWorkers={(e) => this.editWorkers(e)} /> : ''}
             {(this.state.nav.tech) ? <Tech exit={() => this.exit()} /> : ''}
             {(this.state.nav.buildings) ? <Buildings exit={() => this.exit()} /> : ''}
             {(this.state.nav.help) ? <Help exit={() => this.exit()} /> : ''}

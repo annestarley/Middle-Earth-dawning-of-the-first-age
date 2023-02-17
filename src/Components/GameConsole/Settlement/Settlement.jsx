@@ -17,11 +17,11 @@ class Settlement extends Component {
       <Fragment>
         <div className='settlement-console'>
           <Strength population={this.props.settlement.population} />
-          <Farming farming={this.props.settlement.farming} />
-          <Meadows meadows={this.props.settlement.meadows} />
-          <Mining mining={this.props.settlement.mining} />
-          <Fishing fishing={this.props.settlement.fishing} />
-          <Lore lore={this.props.settlement.lore} />
+          <Farming farming={this.props.settlement.farming} editWorkers={(e) => this.props.editWorkers(e)} />
+          <Meadows meadows={this.props.settlement.meadows} editWorkers={(e) => this.props.editWorkers(e)} />
+          <Mining mining={this.props.settlement.mining} editWorkers={(e) => this.props.editWorkers(e)} />
+          <Fishing fishing={this.props.settlement.fishing} editWorkers={(e) => this.props.editWorkers(e)} />
+          <Lore lore={this.props.settlement.lore} editWorkers={(e) => this.props.editWorkers(e)} />
         </div>
       </Fragment>
     )
