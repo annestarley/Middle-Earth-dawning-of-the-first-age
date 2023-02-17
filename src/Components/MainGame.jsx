@@ -33,25 +33,25 @@ class MainGame extends Component {
         },
         meadows: {
           num: 0,
-          limit: 0,
+          limit: 2,
           effect: 3,
           multiplier: 1
         },
         fishing: {
           num: 0,
-          limit: 0,
+          limit: 2,
           effect: 4,
           multiplier: 1
         },
         mining: {
           num: 0,
-          limit: 0,
+          limit: 2,
           effect: 2,
           multiplier: 1
         },
         lore: {
           num: 0,
-          limit: 0,
+          limit: 2,
           effect: 2,
           multiplier: 1
         },
@@ -91,13 +91,13 @@ class MainGame extends Component {
         <div className="main-game">
           <h1>Middle Earth: The Dawning of the First Age</h1>
           <h3>A precivilization game.</h3>
-          <TopNav setConsole={(e) => this.setConsole(e)} />
+          <TopNav setConsole={(e) => this.setConsole(e)} settlement={this.state.settlement} />
           <div className='console'>
             <LowFood />
             <Starvation />
             <HighRisk />
             <PopulationLimit />
-            {(this.state.nav.settlement) ? <Settlement /> : ''}
+            {(this.state.nav.settlement) ? <Settlement settlement={this.state.settlement} /> : ''}
             {(this.state.nav.tech) ? <Tech exit={() => this.exit()} /> : ''}
             {(this.state.nav.buildings) ? <Buildings exit={() => this.exit()} /> : ''}
             {(this.state.nav.help) ? <Help exit={() => this.exit()} /> : ''}

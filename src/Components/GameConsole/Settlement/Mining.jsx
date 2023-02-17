@@ -13,7 +13,7 @@ class Mining extends Component {
           <div className='round-button-container'>
             <div className='plus button-round'>+</div>
           </div>
-          <div className='settlement-stats'><span>num</span> / <span>limit</span></div>
+          <div className='settlement-stats'><span>{this.props.mining.num}</span> / <span>{this.props.mining.limit}</span></div>
           <div className='round-button-container'>
             <div className='minus button-round'>-</div>
           </div>

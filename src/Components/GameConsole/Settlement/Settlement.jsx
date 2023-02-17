@@ -16,11 +16,12 @@ class Settlement extends Component {
     return (
       <Fragment>
         <div className='settlement-console'>
-          <Strength />
-          <Farming />
-          <Meadows />
-          <Mining />
-          <Fishing />
+          <Strength population={this.props.settlement.population} />
+          <Farming farming={this.props.settlement.farming} />
+          <Meadows meadows={this.props.settlement.meadows} />
+          <Mining mining={this.props.settlement.mining} />
+          <Fishing fishing={this.props.settlement.fishing} />
+          <Lore lore={this.props.settlement.lore} />
         </div>
       </Fragment>
     )

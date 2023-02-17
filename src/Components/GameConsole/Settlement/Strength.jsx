@@ -10,7 +10,7 @@ class Strength extends Component {
     return (
       <Fragment>
         <div className='strength-div'>
-          <div className='settlement-stats'><span>num</span> / <span>limit</span></div>
+          <div className='settlement-stats'><span>{this.props.population.number}</span> / <span>{this.props.population.limit}</span></div>
         </div>
       </Fragment>
     )
