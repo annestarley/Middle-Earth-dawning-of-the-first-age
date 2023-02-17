@@ -1,4 +1,5 @@
 import React, {Component, Fragment } from 'react';
+import FishingWorkers from './Workers/FishingWorkers';
 
 class Fishing extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class Fishing extends Component {
   render() {
     return (
       <Fragment>
+        <FishingWorkers population={this.props.fishing.num}/>
         <div className='fishing-div'>
           <div className='round-button-container'>
             <div className='plus button-round' onClick={(e) => this.props.editWorkers(e)}>+</div>

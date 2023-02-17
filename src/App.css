@@ -245,7 +245,7 @@ h1, h3 {
 }
 
 .strength-div {
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -262,7 +262,7 @@ h1, h3 {
 }
 
 .lore-div {
-  bottom: 20%;
+  bottom: 15%;
   left: 45%;
 }
 
@@ -320,11 +320,21 @@ h1, h3 {
 #worker-3 {bottom: 40%; left: 70%;}
 
 .strength-workers {
-  top: 39%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.farming-workers { bottom: 14%; right: 10%; }
+
+.fishing-workers { bottom: 20%; left: 0%; }
+
+.lore-workers { bottom: 23%; left: 39%; }
+
+.meadow-workers { top: 12%; right: 10%; }
+
+.mining-workers { top: 16%; left: 0%; }
 
 /* Tech CSS */
 .techs-div {

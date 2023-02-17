@@ -1,4 +1,5 @@
 import React, {Component, Fragment } from 'react';
+import LoreWorkers from './Workers/LoreWorkers';
 
 class Lore extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class Lore extends Component {
   render() {
     return (
       <Fragment>
+        <LoreWorkers population={this.props.lore.num}/>
         <div className='lore-div'>
           <div className='round-button-container'>
             <div className='plus button-round' onClick={(e) => this.props.editWorkers(e)}>+</div>

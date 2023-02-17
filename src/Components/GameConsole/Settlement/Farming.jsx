@@ -1,4 +1,5 @@
 import React, {Component, Fragment } from 'react';
+import FarmingWorkers from './Workers/FarmingWorkers.jsx';
 
 class Farming extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class Farming extends Component {
   render() {
     return (
       <Fragment>
+        <FarmingWorkers population={this.props.farming.num}/>
         <div className='farming-div'>
           <div className='round-button-container'>
             <div className='plus button-round' onClick={(e) => this.props.editWorkers(e)} >+</div>
