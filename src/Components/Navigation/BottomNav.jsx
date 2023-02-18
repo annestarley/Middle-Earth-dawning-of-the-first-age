@@ -30,8 +30,9 @@ class BottomNav extends Component {
           <div className='right-bottom-nav'>
             <div className='nav-bar-item turn stats'>
               <div id='turn-text' className='turn-line'>turn</div>
+              <div id='turn'>{this.props.turn}</div>
             </div>
-            <div className='nav-bar-item end button'>
+            <div className='nav-bar-item end button' onClick={()=>this.props.endTurn()}>
               End Turn
             </div>
           </div>

@@ -11,7 +11,7 @@ class TopNav extends Component {
       <Fragment>
         <div className='nav-bar top-nav'>
           <div className='nav-bar-item year stats'>
-            <div id='year' className='single-line-item'>year</div>
+            <div id='year' className='single-line-item'>YT {this.props.turn+1050}</div>
           </div>
           <div className='nav-bar-item population stats'>
             <div id='pop-limit'>

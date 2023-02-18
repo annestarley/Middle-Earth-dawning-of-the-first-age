@@ -47,25 +47,29 @@ class MainGame extends Component {
           num: 0,
           limit: 5,
           effect: 2,
-          multiplier: 1
+          multiplier: 1,
+          passive: 2.4
         },
         lore: {
           num: 0,
           limit: 2,
           effect: 2,
-          multiplier: 1
+          multiplier: 1,
+          passive: 4.8
         },
         population: {
           number: 12,
           limit: 25,
           multiplier: 1
         }
-      }
+      },
+      turn: 1
     }
 
     this.setConsole = this.setConsole.bind(this);
     this.exit = this.exit.bind(this);
     this.editWorkers = this.editWorkers.bind(this);
+    this.endTurn = this.endTurn.bind(this);
   }
 
   setConsole (e) {
@@ -106,13 +110,18 @@ class MainGame extends Component {
     }
   }
 
+  endTurn() {
+    let newTurn = this.state.turn + 1;
+    this.setState({turn: newTurn});
+  }
+
   render() {
     return (
       <Fragment>
         <div className="main-game">
           <h1>Middle Earth: The Dawning of the First Age</h1>
           <h3>A precivilization game.</h3>
-          <TopNav setConsole={(e) => this.setConsole(e)} settlement={this.state.settlement} />
+          <TopNav setConsole={(e) => this.setConsole(e)} settlement={this.state.settlement} turn={this.state.turn} />
           <div className='console'>
             <LowFood />
             <Starvation />
@@ -125,7 +134,7 @@ class MainGame extends Component {
             {(this.state.nav.info) ? <Info exit={() => this.exit()} /> : ''}
             {(this.state.nav.menu) ? <Menu exit={() => this.exit()} /> : ''}
           </div>
-          <BottomNav setConsole={(e) => this.setConsole(e)} />
+          <BottomNav setConsole={(e) => this.setConsole(e)} turn={this.state.turn} endTurn={() => this.endTurn()}/>
         </div>
       </Fragment>
     )
