@@ -45,7 +45,7 @@ class MainGame extends Component {
         },
         mining: {
           num: 0,
-          limit: 2,
+          limit: 5,
           effect: 2,
           multiplier: 1
         },

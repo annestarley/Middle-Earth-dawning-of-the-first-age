@@ -15,7 +15,14 @@ class TopNav extends Component {
           </div>
           <div className='nav-bar-item population stats'>
             <div id='pop-limit'>
-              <span id='pop'>{this.props.settlement.population.number}</span>
+              <span id='pop'>{
+                this.props.settlement.population.number
+                +this.props.settlement.farming.num
+                +this.props.settlement.fishing.num
+                +this.props.settlement.lore.num
+                +this.props.settlement.meadows.num
+                +this.props.settlement.mining.num
+              }</span>
               <span>/</span>
               <span id='limit'>{this.props.settlement.population.limit}</span>
             </div>
