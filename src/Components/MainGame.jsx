@@ -7,10 +7,6 @@ import Tech from './GameConsole/Tech/Tech';
 import Buildings from './GameConsole/Buildings/Buildings';
 import Help from './GameConsole/Help';
 import Menu from './GameConsole/Menu';
-import LowFood from './Navigation/ToolTips/LowFood';
-import Starvation from './Navigation/ToolTips/Starvation';
-import HighRisk from './Navigation/ToolTips/HighRisk';
-import PopulationLimit from './Navigation/ToolTips/PopulationLimit'
 
 class MainGame extends Component {
   constructor(props) {
@@ -28,19 +24,19 @@ class MainGame extends Component {
         farming: {
           num: 0,
           limit: 15,
-          effect: 2,
+          effect: 2.4,
           multiplier: 1
         },
         meadows: {
           num: 0,
           limit: 2,
-          effect: 3,
+          effect: 0,
           multiplier: 1
         },
         fishing: {
           num: 0,
           limit: 2,
-          effect: 4,
+          effect: 0,
           multiplier: 1
         },
         mining: {
@@ -48,14 +44,16 @@ class MainGame extends Component {
           limit: 5,
           effect: 2,
           multiplier: 1,
-          passive: 2.4
+          passive: 2.4,
+          total: 0
         },
         lore: {
           num: 0,
           limit: 2,
           effect: 2,
           multiplier: 1,
-          passive: 4.8
+          passive: 2.4,
+          total: 2.4
         },
         population: {
           number: 12,
@@ -69,8 +67,8 @@ class MainGame extends Component {
     this.setConsole = this.setConsole.bind(this);
     this.exit = this.exit.bind(this);
     this.editWorkers = this.editWorkers.bind(this);
-    this.endTurn = this.endTurn.bind(this);
     this.close = this.close.bind(this);
+    this.endTurn = this.endTurn.bind(this);
   }
 
   setConsole (e) {
@@ -82,6 +80,7 @@ class MainGame extends Component {
         prop == e.target.id ? e.target.classList.add('active') : document.getElementById(prop).classList.remove('active')
       }
     }
+    if (e.target.id === 'menu') document.querySelector('.App').classList.add('opaque');
   }
 
   exit () {
@@ -100,6 +99,7 @@ class MainGame extends Component {
     this.setState({nav: newState})
     document.getElementById('settlement').classList.add('active');
     document.getElementById('menu').classList.remove('active');
+    document.querySelector('.App').classList.remove('opaque')
   }
 
   editWorkers (e) {
@@ -133,17 +133,13 @@ class MainGame extends Component {
         <div className="main-game">
           <h1>Middle Earth: The Dawning of the First Age</h1>
           <h3>A precivilization game.</h3>
-          <TopNav setConsole={(e) => this.setConsole(e)} settlement={this.state.settlement} turn={this.state.turn} />
+          <TopNav setConsole={(e) => this.setConsole(e)} settlement={this.state.settlement} turn={this.state.turn} totalPop={this.state.totalPop}/>
           <div className='console'>
-            <LowFood />
-            <Starvation />
-            <HighRisk />
-            <PopulationLimit />
-            {(this.state.nav.settlement || this.state.nav.menu) ? <Settlement settlement={this.state.settlement} menu={this.state.nav.menu} editWorkers={(e) => this.editWorkers(e)} close={() => this.close()}/> : ''}
+            {(this.state.nav.settlement || this.state.nav.menu) ? <Settlement settlement={this.state.settlement} menu={this.state.nav.menu} editWorkers={(e) => this.editWorkers(e)} close={() => this.close()} /> : ''}
             {(this.state.nav.tech) ? <Tech exit={() => this.exit()} /> : ''}
             {(this.state.nav.buildings) ? <Buildings exit={() => this.exit()} /> : ''}
             {(this.state.nav.help) ? <Help exit={() => this.exit()} /> : ''}
-            {(this.state.nav.info) ? <Info exit={() => this.exit()} /> : ''}
+            {(this.state.nav.info) ? <Info exit={() => this.exit()} {...this.state}/> : ''}
           </div>
           <BottomNav setConsole={(e) => this.setConsole(e)} turn={this.state.turn} endTurn={() => this.endTurn()}/>
         </div>

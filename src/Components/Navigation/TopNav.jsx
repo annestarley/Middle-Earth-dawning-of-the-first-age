@@ -6,6 +6,12 @@ class TopNav extends Component {
     this.state = {}
   }
 
+  totalPop = (this.props.settlement.population.number + this.props.settlement.lore.num + this.props.settlement.farming.num + this.props.settlement.fishing.num + this.props.settlement.meadows.num);
+  foodGrowth =  (this.props.settlement.farming.effect*this.props.settlement.farming.multiplier*this.props.settlement.farming.num)
+                +(this.props.settlement.meadows.effect*this.props.settlement.meadows.multiplier*this.props.settlement.meadows.num)
+                +(this.props.settlement.fishing.effect*this.props.settlement.fishing.multiplier*this.props.settlement.fishing.num)
+                -this.totalPop;
+
   render() {
     return (
       <Fragment>
@@ -15,21 +21,14 @@ class TopNav extends Component {
           </div>
           <div className='nav-bar-item population stats'>
             <div id='pop-limit'>
-              <span id='pop'>{
-                this.props.settlement.population.number
-                +this.props.settlement.farming.num
-                +this.props.settlement.fishing.num
-                +this.props.settlement.lore.num
-                +this.props.settlement.meadows.num
-                +this.props.settlement.mining.num
-              }</span>
+              <span id='pop'>{this.totalPop}</span>
               <span>/</span>
               <span id='limit'>{this.props.settlement.population.limit}</span>
             </div>
-            <div id='pop-growth'>+pop</div>
+            <div id='pop-growth'>{Math.round((this.foodGrowth/20)*10)/10}</div>
           </div>
           <div className='nav-bar-item food stats'>
-            <div className='food-growth' className='single-line-item'>+food</div>
+            <div className='food-growth' className='single-line-item'>{Math.round(this.foodGrowth*100)/100}</div>
           </div>
           <div className='nav-bar-item production stats'>
             <div id='total-prod'>total prod</div>

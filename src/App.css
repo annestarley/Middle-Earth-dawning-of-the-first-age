@@ -120,6 +120,7 @@ h1, h3 {
 /* Tool Tips CSS */
 .tip {
   position: absolute;
+  width: auto!important;
   background: white;
   padding: 1%;
   border: solid 2px #000;
@@ -664,10 +665,12 @@ h1, h3 {
   transform: translate(50%, -50%);
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0px 0px 100px 100px #ccc;
+  box-shadow: 0px 0px 3px 3px #ccc;
   background-color: white;
 }
 
 .exit-restart-div { width: 230px; }
 
 .exit-button, .restart-button, .close-button { margin: 4%; padding: 10% }
+
+.opaque { background: rgba(60, 60, 60, 0.1); }

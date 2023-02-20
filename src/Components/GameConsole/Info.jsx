@@ -7,7 +7,14 @@ class Info extends Component {
     this.state = {}
   }
 
+  totalPop = (this.props.settlement.population.number + this.props.settlement.lore.num + this.props.settlement.farming.num + this.props.settlement.fishing.num + this.props.settlement.meadows.num);
+  foodGrowth =  (this.props.settlement.farming.effect*this.props.settlement.farming.multiplier*this.props.settlement.farming.num)
+                +(this.props.settlement.meadows.effect*this.props.settlement.meadows.multiplier*this.props.settlement.meadows.num)
+                +(this.props.settlement.fishing.effect*this.props.settlement.fishing.multiplier*this.props.settlement.fishing.num)
+                -this.totalPop;
+
   render() {
+    console.log(this.props.settlement.fishing.effect*this.props.settlement.fishing.multiplier*this.props.settlement.fishing.num)
     return (
       <Fragment>
         <ExitButton exit={() => this.props.exit()} />
@@ -16,20 +23,20 @@ class Info extends Component {
             <h2>Population</h2>
             <p>Laboring kinsman produce valuable resources</p>
             <ul>
-              <li>Current population: pop</li>
-              <li>Maximum population: max</li>
-              <li>Pop. growth rate: rate</li>
+              <li>Current population: {this.totalPop}</li>
+              <li>Maximum population: {this.props.settlement.population.limit}</li>
+              <li>Pop. growth rate: {Math.round((this.foodGrowth/20)*10)/10}</li>
             </ul>
           </div>
           <div className='info-div info-food'>
             <h2>Food</h2>
             <p>Every 20 food adds 1 human.</p>
             <ul>
-              <li>Food growth/turn: growth</li>
-              <li>Food consumed/turn: cons</li>
-              <li>Food from farming: farm</li>
-              <li>Food from hunting: hunt</li>
-              <li>Food from fishing: fish</li>
+              <li>Food growth/turn: {Math.round(this.foodGrowth*100)/100}</li>
+              <li>Food consumed/turn: {this.totalPop}</li>
+              <li>Food from farming: {this.props.settlement.farming.effect}</li>
+              <li>Food from hunting: {this.props.settlement.meadows.effect}</li>
+              <li>Food from fishing: {this.props.settlement.fishing.effect}</li>
             </ul>
           </div>
           <div className='info-div info-mining'>
