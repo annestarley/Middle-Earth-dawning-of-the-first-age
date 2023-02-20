@@ -14,7 +14,6 @@ class Info extends Component {
                 -this.totalPop;
 
   render() {
-    console.log(this.props.settlement.fishing.effect*this.props.settlement.fishing.multiplier*this.props.settlement.fishing.num)
     return (
       <Fragment>
         <ExitButton exit={() => this.props.exit()} />

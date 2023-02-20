@@ -42,10 +42,9 @@ class MainGame extends Component {
         mining: {
           num: 0,
           limit: 5,
-          effect: 2,
+          effect: 0,
           multiplier: 1,
-          passive: 2.4,
-          total: 0
+          passive: 2.4
         },
         lore: {
           num: 0,
@@ -58,7 +57,7 @@ class MainGame extends Component {
         population: {
           number: 12,
           limit: 25,
-          multiplier: 1
+          multiplier: 1,
         }
       },
       turn: 1
@@ -133,7 +132,7 @@ class MainGame extends Component {
         <div className="main-game">
           <h1>Middle Earth: The Dawning of the First Age</h1>
           <h3>A precivilization game.</h3>
-          <TopNav setConsole={(e) => this.setConsole(e)} settlement={this.state.settlement} turn={this.state.turn} totalPop={this.state.totalPop}/>
+          <TopNav setConsole={(e) => this.setConsole(e)} {...this.state} />
           <div className='console'>
             {(this.state.nav.settlement || this.state.nav.menu) ? <Settlement settlement={this.state.settlement} menu={this.state.nav.menu} editWorkers={(e) => this.editWorkers(e)} close={() => this.close()} /> : ''}
             {(this.state.nav.tech) ? <Tech exit={() => this.exit()} /> : ''}
