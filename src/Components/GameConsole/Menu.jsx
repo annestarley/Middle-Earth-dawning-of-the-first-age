@@ -1,4 +1,10 @@
 import React, {Component, Fragment } from 'react';
+import Farming from './Settlement/Farming';
+import Meadows from './Settlement/Meadows';
+import Fishing from './Settlement/Fishing';
+import Lore from './Settlement/Lore';
+import Mining from './Settlement/Mining';
+import Strength from './Settlement/Strength';
 
 class Menu extends Component {
   constructor(props) {
@@ -9,7 +15,15 @@ class Menu extends Component {
   render() {
     return (
       <Fragment>
-        <h1>Menu to come</h1>
+        <div className='menu-console'>
+          <div className='menu-popup'>
+            <div className='exit-restart-div'>
+              <button className='exit-button button'>Exit</button>
+              <button className='restart-button button'>Restart</button>
+            </div>
+            <button className='close-button button' onClick={() => this.props.close()}>Close</button>
+          </div>
+        </div>
       </Fragment>
     )
   }

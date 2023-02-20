@@ -70,14 +70,17 @@ class MainGame extends Component {
     this.exit = this.exit.bind(this);
     this.editWorkers = this.editWorkers.bind(this);
     this.endTurn = this.endTurn.bind(this);
+    this.close = this.close.bind(this);
   }
 
   setConsole (e) {
     let navState = this.state.nav;
-    for (let prop in navState) {
-      prop == e.target.id ? navState[prop] = true : navState[prop] = false;
-      this.setState({nav: navState})
-      prop == e.target.id ? e.target.classList.add('active') : document.getElementById(prop).classList.remove('active')
+    if (!this.state.nav.menu) {
+      for (let prop in navState) {
+        prop == e.target.id ? navState[prop] = true : navState[prop] = false;
+        this.setState({nav: navState})
+        prop == e.target.id ? e.target.classList.add('active') : document.getElementById(prop).classList.remove('active')
+      }
     }
   }
 
@@ -88,6 +91,15 @@ class MainGame extends Component {
       this.setState({nav: navState})
       prop == 'settlement' ? (document.getElementById(prop).classList.contains('active') ? console.log('already active') : document.getElementById(prop).classList.add('active')) : (document.getElementById(prop).classList.contains('active') ? document.getElementById(prop).classList.remove('active') : console.log('not active'));
     }
+  }
+
+  close () {
+    let newState = this.state.nav
+    newState.settlement = true;
+    newState.menu = false;
+    this.setState({nav: newState})
+    document.getElementById('settlement').classList.add('active');
+    document.getElementById('menu').classList.remove('active');
   }
 
   editWorkers (e) {
@@ -127,12 +139,11 @@ class MainGame extends Component {
             <Starvation />
             <HighRisk />
             <PopulationLimit />
-            {(this.state.nav.settlement) ? <Settlement settlement={this.state.settlement} editWorkers={(e) => this.editWorkers(e)} /> : ''}
+            {(this.state.nav.settlement || this.state.nav.menu) ? <Settlement settlement={this.state.settlement} menu={this.state.nav.menu} editWorkers={(e) => this.editWorkers(e)} close={() => this.close()}/> : ''}
             {(this.state.nav.tech) ? <Tech exit={() => this.exit()} /> : ''}
             {(this.state.nav.buildings) ? <Buildings exit={() => this.exit()} /> : ''}
             {(this.state.nav.help) ? <Help exit={() => this.exit()} /> : ''}
             {(this.state.nav.info) ? <Info exit={() => this.exit()} /> : ''}
-            {(this.state.nav.menu) ? <Menu exit={() => this.exit()} /> : ''}
           </div>
           <BottomNav setConsole={(e) => this.setConsole(e)} turn={this.state.turn} endTurn={() => this.endTurn()}/>
         </div>

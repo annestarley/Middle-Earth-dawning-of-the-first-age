@@ -7,7 +7,6 @@ class StrengthWorkers extends Component {
   }
 
   render() {
-    console.log('strength population', this.props.population)
     return (
       <Fragment>
         <div className='workers strength-workers'>

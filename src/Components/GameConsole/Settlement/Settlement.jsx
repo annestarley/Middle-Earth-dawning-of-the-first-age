@@ -5,6 +5,7 @@ import Fishing from './Fishing';
 import Lore from './Lore';
 import Mining from './Mining';
 import Strength from './Strength';
+import Menu from '../Menu';
 
 class Settlement extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class Settlement extends Component {
     return (
       <Fragment>
         <div className='settlement-console'>
+          {this.props.menu ? <Menu close={() => this.props.close()}/> : ''} 
           <Strength population={this.props.settlement.population} />
           <Farming farming={this.props.settlement.farming} editWorkers={(e) => this.props.editWorkers(e)} />
           <Meadows meadows={this.props.settlement.meadows} editWorkers={(e) => this.props.editWorkers(e)} />

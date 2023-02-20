@@ -23,7 +23,7 @@ class BottomNav extends Component {
             <div className='nav-bar-item help button' id='help' onClick={(e) => this.props.setConsole(e)}>
               Help
             </div>
-            <div className='nav-bar-item menu button'>
+            <div className='nav-bar-item menu button' id='menu' onClick={(e) => this.props.setConsole(e)}>
               Menu
             </div>
           </div>
